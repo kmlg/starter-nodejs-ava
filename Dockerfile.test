@@ -1,0 +1,4 @@
+FROM node:10.15.3-alpine
+COPY . .
+RUN npm i
+ENTRYPOINT [ "npm", "test" ]

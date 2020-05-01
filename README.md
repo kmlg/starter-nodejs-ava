@@ -2,7 +2,7 @@
 
 A NodeJS starter development kit with xo, ava, docker, dotenv
 
-[![Build Status](https://travis-ci.com/kmlg/starter-nodejs-ava.svg?token=q2t3p8sxq5yDXMB2ndHy&branch=master)](https://travis-ci.com/kmlg/starter-nodejs-ava)
+[![Build Status](https://travis-ci.com/kmlg/starter-nodejs-ava.svg?branch=master)](https://travis-ci.com/kmlg/starter-nodejs-ava)
 
 ## Features
 
@@ -25,4 +25,14 @@ npm run lint
 npm run fix
 
 npm test
+```
+
+## Additional
+
+```bash
+
+npm run watch:test
+
+npm run docker:start:test
+
 ```

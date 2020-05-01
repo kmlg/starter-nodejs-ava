@@ -6,8 +6,11 @@
   "scripts": {
     "lint": "xo",
     "fix": "xo --fix",
-    "test": "npm run lint && nyc ava",
-    "watch:test": "npm run lint && nyc ava --watch"
+    "test": "nyc ava && npm run report",
+    "report": "nyc report --reporter=html",
+    "ava": "ava",
+    "watch:test": "npm run lint && nyc ava --watch",
+    "docker:start:test": "docker-compose -f docker-compose.test.yml up"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,15 @@
     "url": "https://github.com/kmlg/starter-nodejs-ava/issues"
   },
   "homepage": "https://github.com/kmlg/starter-nodejs-ava#readme",
+  "ava": {
+		"files": [
+			"test/*"
+		],
+		"concurrency": 5,
+		"failFast": true,
+		"failWithoutAssertions": false,
+		"verbose": true
+	},
   "devDependencies": {
     "ava": "^3.8.1",
     "dotenv": "^8.2.0",
