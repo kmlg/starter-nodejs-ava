@@ -1,0 +1,36 @@
+{
+  "name": "starter-es6",
+  "version": "0.0.1",
+  "description": "A NodeJS starter development kit with xo, ava, docker, dotenv",
+  "main": "index.js",
+  "scripts": {
+    "lint": "xo",
+    "fix": "xo --fix",
+    "test": "npm run lint && nyc ava",
+    "watch:test": "npm run lint && nyc ava --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:kmlg/starter-nodejs-ava.git"
+  },
+  "keywords": [
+    "nodejs",
+    "es6",
+    "ava",
+    "xo",
+    "docker",
+    "dotenv"
+  ],
+  "author": "Kiril Mitev <kiril@kmitev.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmlg/starter-nodejs-ava/issues"
+  },
+  "homepage": "https://github.com/kmlg/starter-nodejs-ava#readme",
+  "devDependencies": {
+    "ava": "^3.8.1",
+    "dotenv": "^8.2.0",
+    "nyc": "^15.0.1",
+    "xo": "^0.30.0"
+  }
+}
